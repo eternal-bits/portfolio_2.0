@@ -19,17 +19,16 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-
 }
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 section {
-    min-width: 100vh;
+    min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
@@ -182,7 +181,6 @@ span {
 .heading {
     text-align: center;
     font-size: 5rem;
-
 }
 
 .about-content h2 {
@@ -351,7 +349,7 @@ span {
     width: 49%;
 }
 
-.contact FORM textarea {
+.contact form textarea {
     resize: none;
 }
 
@@ -391,8 +389,6 @@ span {
     font-size: 2.4rem;
     color: var(--second-bg-color);
 }
-
-
 
 /* breakpoints */
 
@@ -473,11 +469,11 @@ span {
     }
 
     .about {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
-    .about img {
-        width: 70vh;
+    .about-img img {
+        width: 70vw;
         margin-top: 4rem;
     }
 
@@ -498,6 +494,14 @@ span {
     .portfolio-container {
         grid-template-columns: 1fr;
     }
+    
+    .heading {
+        font-size: 4rem;
+    }
+    
+    .home-content h1 {
+        font-size: 4rem;
+    }
 }
 
 @media (max-width: 450px) {
@@ -508,24 +512,48 @@ span {
     .contact form .input-box input {
         width: 100%;
     }
+    
+    section {
+        padding: 8rem 5% 2rem;
+    }
+    
+    .home-content {
+        text-align: center;
+    }
+    
+    .social-media {
+        display: flex;
+        justify-content: center;
+    }
 }
 
-@media (max-width: 365px) {
+@media (max-width: 380px) {
     .home-img img {
-        width: 90vh;
+        width: 90vw;
     }
 
-    .about-img img{
-        width: 90vh;
+    .about-img img {
+        width: 90vw;
     }
 
     .footer {
         flex-direction: column-reverse;
     }
 
-    .footer p{
+    .footer p {
         text-align: center;
         margin-top: 2rem;
     }
-
+    
+    .heading {
+        font-size: 3.5rem;
+    }
+    
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+    
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
 }
